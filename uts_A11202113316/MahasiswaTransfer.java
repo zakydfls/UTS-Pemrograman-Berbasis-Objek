@@ -8,10 +8,12 @@ public class MahasiswaTransfer extends MahasiswaBaru {
         this.asalUniversitas = asalUniversitas;
     }
 
+    @Override
     public boolean ikutOspek() {
         return false;
     }
 
+    @Override
     public void infoMahasiswa() {
         super.infoMahasiswa();
         System.out.println("Asal Universitas : " + this.asalUniversitas);

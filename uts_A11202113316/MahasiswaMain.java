@@ -40,6 +40,7 @@ public class MahasiswaMain {
             int usia = sc.nextInt();
             sc.nextLine();
 
+
             System.out.print("Jumlah matakuliah yang telah ditempuh : ");
             int jumlahMataKuliah = sc.nextInt();
             sc.nextLine();

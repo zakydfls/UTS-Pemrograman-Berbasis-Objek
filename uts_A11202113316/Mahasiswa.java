@@ -17,12 +17,12 @@ class Mahasiswa {
         this.krs = krs;
     }
 
-    public float[] getNilai() {
-        return nilai;
-    }
-
     public void setNilai(float[] nilai) {
         this.nilai = nilai;
+    }
+
+    public float[] getNilai() {
+        return nilai;
     }
 
     public float hitungRataNilai(float[] nilai) {
@@ -38,16 +38,18 @@ class Mahasiswa {
         System.out.println("NIM Mahasiswa     : " + this.nim);
         System.out.println("Semester          : " + this.semester);
         System.out.println("Usia              : " + this.usia);
+        System.out.println("Jumlah KRS        : " + this.krs.length);
     }
 
     public void infoKrsMahasiswa() {
         System.out.println("KRS " + this.nama + " : ");
-        Set<String> uniqueKrs = new HashSet<String>();
+        Set<String> krsInfo = new HashSet<String>();
         for (int i = 0; i < this.krs.length; i++) {
-            uniqueKrs.add(this.krs[i]);
-        }
-        for (String mataKuliah : uniqueKrs) {
-            System.out.println("- " + mataKuliah);
+            if (!krsInfo.contains(this.krs[i])) {
+                krsInfo.add(this.krs[i]);
+                krsInfo.add(this.nama);
+                System.out.println("- " + krs[i] + "      : " + nilai[i]);
+            }
         }
     }
 }

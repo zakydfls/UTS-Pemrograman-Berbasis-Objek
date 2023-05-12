@@ -14,6 +14,7 @@ class MahasiswaLulus extends Mahasiswa {
         return true;
     }
 
+    @Override
     public void infoMahasiswa() {
         super.infoMahasiswa();
         System.out.println("Tahun Wisuda : " + this.tahunWisuda);
